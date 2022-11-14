@@ -1,0 +1,88 @@
+
+body {
+    background-image: url('sky.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%; 
+    text-align: center !important;
+    margin: auto !important;
+  }
+
+label[for="from"], [for="to"], [for="departure"], [for="return"]{
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+    font-size:25px;
+} 
+
+label[for="name1"], [for="name2"], [for="name3"], [for="dob1"]{
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+} 
+
+label[for="dob2"], [for="dob3"], [for="doc1"], [for="doc2"]{
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+} 
+
+label[for="doc3"], [for="dob3"], [for="doc1"], [for="doc2"]{
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+} 
+
+label[for="fname"], [for="femail"], [for="fmobile"], [for="cardno"]{
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+} 
+
+
+label[for="male1"], [for="female1"], [for="age1"] {
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+}
+
+label[for="male2"], [for="female2"], [for="age2"] {
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+}
+
+label[for="male3"], [for="female3"], [for="age3"] {
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+}
+
+label[for="adults"], [for="children"], [for="age3"] {
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+}
+
+label[for="food"],[for="travelclass"],[for="address"]{
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+}
+
+span {
+    color:rgb(20, 221, 90);
+    font-weight: bold;
+    font-size:25px;
+}
+
+h1 {
+    color:rgb(221, 124, 20);
+}
+
+#full_form {display: none};
+
+.mybutton {
+    height:50px;
+    width:200px;
+    background: #141a34;
+    color: rgb(236, 207, 207);
+    border-radius:15px;
+    outline: 0;
+    cursor: pointer;
+    left: 200px;
+    text-align: center;
+    font-size:medium;
+}  
+
+

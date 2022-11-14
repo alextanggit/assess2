@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+      body {
+            background-image: url('sky.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%; 
+            text-align: center !important;
+            margin: auto !important;
+        }
+
+        .container {
+            height: 200px;
+            position: relative;
+            border: 1px solid rgb(29, 226, 85);
+        }
+
+        .center {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        }
+
+        h1 {
+            color:rgb(41, 200, 110);
+        }
+
+        .mybutton {
+            height:50px;
+            width:200px;
+            background: #141a34;
+            color: rgb(236, 207, 207);
+            border-radius:15px;
+            outline: 0;
+            cursor: pointer;
+            left: 200px;
+            text-align: center;
+            font-size:medium;
+        }  
+
+
+    </style>    
+</head>
+<body>
+ 
+    <div class="container">
+        <div class="center">
+            <h1>Thank you for your booking!</h1>
+            <button type="button" class="mybutton" onclick="window.location.href='index.html';">Home Page</button>
+        </div>
+    </div>
+
+    <script>
+       // document.getElementById('disp').innerHTML = localStorage.getItem("confirmationMsg");
+
+    </script>
+    
+</body>
+</html>

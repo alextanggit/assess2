@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Booking</title>
+    <link rel="stylesheet" href=".\style.css">
+    <script src=".\index.js"></script>
+</head>
+
+<body>
+<header>
+  <h1>Welcome to Online Booking!</h1>
+</header>
+
+<!-- <form name="myForm" onsubmit="return validateForm()" action="confirmation.html" method="post"> -->
+
+<form name="myform" onsubmit="return validFormFieldInput()" action="confirmation.html" method="post">  
+  <!-- Radio Button --> 
+  <br><br>
+  <input type="radio" name="trip" id="oneway" value="oneway" onclick="checkButton()" required="">
+  <label for="ow"><span>One Way</span></label>
+  
+  &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+  &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+  
+  
+  <input type="radio" name="trip" id="round" value="round" onclick="checkButton()" required="">
+  <label for="rt"><span>Round Trip</span></label><br>
+  
+  <h3 id="disp" style= "color:rgb(14, 23, 14)"></h3>
+  <h4 id="error" style= "color:red"></h4>  
+
+  <div id = "full_form">
+      <label for="from">From:</label>
+      <select required name='from' id="from">
+          <option value="">Select a location...</option>
+          <option value="Australia">Australia</option>
+          <option value="France">France</option>
+          <option value="India">India</option>
+          <option value="Colombia">Colombia</option>
+          <option value="South Korea">South Korea</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Myanmar">Myanmar</option>
+          <option value="United States of America">United States of America</option>
+          <option value="Thailand">Thailand</option>
+          <option value="Vietnam">Vietnam</option>
+      </select>
+
+      &nbsp&nbsp&nbsp
+
+      <label for="to">To:</label>
+      <select required name='to' id="to">
+        <option value="">Select a location...</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="India">India</option>
+        <option value="Colombia">Colombia</option>
+        <option value="South Korea">South Korea</option>
+        <option value="United Kingdom">United Kingdom</option>
+        <option value="Myanmar">Myanmar</option>
+        <option value="United States of America">United States of America</option>
+        <option value="Thailand">Thailand</option>
+        <option value="Vietnam">Vietnam</option>
+      </select>
+      
+      <br><br>
+      <label for="departure">Departure date:</label>
+      <input name="deparure" type="date" id="departure" placeholder="dd-mm-yyyy" required ="">
+      
+      <br><br>
+      <!-- display return or not --> 
+      <class id = "return_form">
+          <label for="return">Return date:</label>
+          <input name="return" type="date" id="return" placeholder="dd-mm-yyyy">
+      </class>  
+      <br>
+      <span>Number of Passengers: </span>&nbsp&nbsp&nbsp 
+      
+      <label for="adults">Adults:</label>
+      <input type="number" id="adults" name="adults">&nbsp&nbsp&nbsp
+      <label for="children">Children:</label>
+      <input type="number" id="children" name="children">&nbsp&nbsp&nbsp
+
+      <br><br>
+      <span>Passenger 1: </span> &nbsp&nbsp&nbsp
+      <label for="name1">Name:</label>
+      <input type="text" id="name1" name="name1" required ="">&nbsp&nbsp&nbsp
+      <label for="dob1">DOB:</label>
+      <input type="date" id="dob1" name="dob1" required ="">&nbsp&nbsp&nbsp
+      
+      <input type="radio" id="male1" name="gender1" value="male11">
+      <label for="male1">Male</label>
+      <input type="radio" id="female1" name="gender1" value="fmale11">
+      <label for="female1">Female</label>&nbsp&nbsp&nbsp
+      <label for="age1">Age:</label>
+      <input type="number" id="age1" name="age1" value="">&nbsp&nbsp&nbsp
+
+      <label for="doc1" class='title_style'>Document No:</label>
+      <input type="text" id="doc1" name="doc1" required ="">
+
+      <br><br>
+      <span>Passenger 2: </span> &nbsp&nbsp&nbsp
+      <label for="name2">Name:</label>
+      <input type="text" id="name2" name="name2">&nbsp&nbsp&nbsp
+      <label for="dob2">DOB:</label>
+      <input type="date" id="dob2" name="dob2">&nbsp&nbsp&nbsp
+
+      <input type="radio" id="male2" name="gender2" value="male22">
+      <label for="male2">Male</label>
+      <input type="radio" id="female2" name="gender2" value="fmale22">
+      <label for="female2">Female</label>&nbsp&nbsp&nbsp
+      <label for="age2">Age:</label>
+      <input type="number" id="age2" name="age2" value="">&nbsp&nbsp&nbsp
+
+      <label for="doc2">Document No:</label>
+      <input type="text" id="doc2" name="doc2">
+
+      <br><br>
+      <span>Passenger 3: </span> &nbsp&nbsp&nbsp
+      <label for="name3">Name:</label>
+      <input type="text" id="name3" name="name3" value="">&nbsp&nbsp&nbsp
+      <label for="dob3">DOB:</label>
+      <input type="date" id="dob3" name="dob3" value="">&nbsp&nbsp&nbsp
+
+      <input type="radio" id="male3" name="gender3" value="male33">
+      <label for="male3">Male</label>
+      <input type="radio" id="female3" name="gender3" value="fmale33">
+      <label for="female3">Female</label>&nbsp&nbsp&nbsp
+      <label for="age3">Age:</label>
+      <input type="number" id="age3" name="age3" value="">&nbsp&nbsp&nbsp
+
+      <label for="doc3">Document No:</label>
+      <input type="text" id="doc3" name="doc3" value="">
+
+      <br><br><br>
+      <label for="food">Food Type:</label>
+      <select name='food' id="food">
+        <option value="">Select food type...</option>
+        <option value="vegetarian">vegetarian</option>
+        <option value="glutenfree">gluten free</option>
+        <option value="diaryfree">diary free</option>
+        <option value="peanutfree">peanut free</option>
+        <option value="childrenmeals">children's meal</option>
+      </select>
+      &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+      <label for="travelclass">Travel Class:</label>
+      <select required name='travelcalss' id="travelcalss">
+        <option value="">Select travel class...</option>
+        <option value="economy">Economy</option>
+        <option value="premium">Premium Economy</option>
+        <option value="business">Business</option>
+        <option value="first">First</option>
+      </select>
+
+      <br><br>
+      <h1><span>Payment Details</span></h1>
+
+      <label for="fname">Full name:</label>
+      <input type="text" id="fname" name="fname" required =""> &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+
+      <label for="femail">Email:</label>
+      <input type="text" id="femail" name="femail" required =""> &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+
+      <label for="address">Address:</label>
+      <textarea id="blog" name="address" rows="1" cols="30"></textarea>
+    
+      <br><br>
+      <label for="fmobile">Mobile:</label>
+      <input type="number" id="fmobile" name="fmobile" value="" required =""> &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp
+
+      <label for="cardno">Credit Card No:</label> 
+      <input type="number" id="cardno" name="cardno" value="" required ="">&nbsp&nbsp&nbsp
+
+      <button type="button" class="mybutton"><input type="submit" value="Submit Booking"></button>
+      
+  </div>
+
+</form> 
+</body>
+</html>
